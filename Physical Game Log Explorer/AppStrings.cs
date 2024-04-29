@@ -18,8 +18,12 @@ public class AppStrings
             TitleText = "Physical Game Log Explorer";
             MenuOptions = new string[4][];
             MenuOptions[0] = ["View Log History", "Import Log", "Exit"];
+            Importing = "Importing...";
+            ImportFinished = "Import Finished!";
         }
 
         public string TitleText {get; set;}
         public string[][] MenuOptions {get; set;}
+        public string ImportFinished {get; set;}
+        public string Importing {get; set;}
 }

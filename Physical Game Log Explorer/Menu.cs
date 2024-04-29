@@ -100,29 +100,18 @@ public class Menu
 
         public void Update()
         {
-            if (fullMenu[cursorPosition] != null && cursorPosition != 0)
+            if(cursorPosition == 0)
             {
-                ChangeSubMenu();
+                Display display = new();
             }
-            else if(cursorPosition == currentMenuItems.Length-1)
+            else if(cursorPosition == 1)
             {
-                if (menuState == 0)
-                {
-                    isRunning = false;
-                }
-                else
-                {
-                    ChangeSubMenu(back: true);
-                }
-            }
-            else if (menuState != 0)
-            {
-                
+                Program.ImportLogFromFile();
+                isDirty = true;
             }
             else
             {
-                
-                
+                isRunning = false;
             }
         }
 
